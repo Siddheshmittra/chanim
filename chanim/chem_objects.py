@@ -11,6 +11,7 @@ from .utils import Arrows
 
 from manim.mobject.types.vectorized_mobject import VGroup, VMobject
 from manim.mobject.text.tex_mobject import *
+from manim import Tex
 from manim.animation.animation import Animation
 from manim.animation.creation import Write
 from manim.animation.fading import FadeIn
@@ -20,6 +21,14 @@ from manim.constants import *
 from manim.mobject.geometry.arc import Dot
 from manim.utils.color import YELLOW
 from manim._config import logger
+
+
+from manim.mobject.text.tex_mobject import *
+from manim.mobject.svg.svg_mobject import VMobjectFromSVGPath
+class TexSymbol(VMobjectFromSVGPath):
+    """Purely a renaming of SVGPathMobject."""
+    pass
+
 
 
 def check_if_instance_change_if_not(obj, instance_of):
